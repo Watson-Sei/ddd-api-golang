@@ -13,11 +13,28 @@ API server configuration for Go language employing DDD
 - domain
     - models
     - repositories
-    - usecases
 ```
 
 - domain: ドメイン層を示すフォルダ
   - models: アプリケーションのドメインモデルが格納されるフォルダ
   - repositories: リポジトリインターフェイスが格納されるフォルダ
-  - usecase: usecaseが格納されるフォルダ
+
+インフラ層のディレクトリ構成:
+```
+- infrastructure
+    - database
+        - gorm
+```
+
+データベースや外部APIなどと対話するコードを格納する場所（外部システムとのアダプタ）
+
+アプリケーション層
+```
+- application
+    - handlers
+    - usecases
+```
+
+- handlers: ルーティング、リクエスト・レスポンスを処理する
+- usecases: ビジネスロジックを処理する
 
